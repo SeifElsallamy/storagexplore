@@ -464,11 +464,11 @@ $totalVisitors = count($visits);
   </script>
   <!-- Social footer -->
 <footer>
+  <a href="https://x.com/0x21SAFE" target="_blank" class="twitter">Twitter</a>
+  <a href="https://github.com/SeifElsallamy/storagexplore" target="_blank" class="github">GitHub</a>
   <div class="brand">
     © <?php echo date("Y"); ?> storagexplore.top
   </div>
-  <a href="https://x.com/0x21SAFE" target="_blank" class="twitter">Twitter</a>
-  <a href="https://github.com/SeifElsallamy/storagexplore" target="_blank" class="github">GitHub</a>
 </footer>
 </body>
 </html>
