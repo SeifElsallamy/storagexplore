@@ -49,14 +49,23 @@ $totalVisitors = count($visits);
   <link rel="canonical" href="https://storagexplore.top/">
 
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
-  <style>
+ <style>
+    html {
+      min-height: 100%;
+      position: relative;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f5f7fa;
       margin: 0;
       padding: 20px;
       color: #333;
+
+      /* keep content from overlapping footer */
+      padding-bottom: 80px;
     }
+
     h1 {
       text-align: center;
       color: #4a6fa5;
@@ -166,7 +175,38 @@ $totalVisitors = count($visits);
       width: 1px;
       overflow: hidden;
     }
-  </style>
+
+    /* === Footer Styles === */
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    background: transparent; 
+    box-sizing: border-box; 
+  }
+    footer .brand {
+      margin-bottom: 8px;
+      color: #444;
+    }
+    footer a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff;
+    }
+    footer a.twitter { background: #1DA1F2; }
+    footer a.github { background: #333; }
+</style>
+
+
 </head>
 <body>
   <!-- Support box -->
@@ -423,15 +463,12 @@ $totalVisitors = count($visits);
     });
   </script>
   <!-- Social footer -->
-  <footer style="margin-top:40px; padding:15px; text-align:center; font-size:14px; color:#555;">
-    <a href="https://x.com/0x21SAFE" target="_blank"
-       style="display:inline-block; margin:0 10px; text-decoration:none; font-weight:600; padding:6px 12px; border-radius:6px; background:#1DA1F2; color:#fff;">
-       Twitter
-    </a>
-    <a href="https://github.com/SeifElsallamy/storagexplore" target="_blank"
-       style="display:inline-block; margin:0 10px; text-decoration:none; font-weight:600; padding:6px 12px; border-radius:6px; background:#333; color:#fff;">
-       GitHub
-    </a>
-  </footer>
+<footer>
+  <div class="brand">
+    © <?php echo date("Y"); ?> storagexplore.top
+  </div>
+  <a href="https://x.com/0x21SAFE" target="_blank" class="twitter">Twitter</a>
+  <a href="https://github.com/SeifElsallamy/storagexplore" target="_blank" class="github">GitHub</a>
+</footer>
 </body>
 </html>
